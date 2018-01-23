@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ZQ-KW-GdH">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13771"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="9gP-Ba-i88">
+            <objects>
+                <tableViewController id="0ZQ-KW-GdH" customClass="TableViewController" customModule="TextViewInTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Z3W-d7-Wvh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="textViewCell" id="Gz1-Iu-r3p" customClass="TextViewTableViewCell" customModule="TextViewInTableView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gz1-Iu-r3p" id="oyN-Bl-Ws5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" keyboardDismissMode="onDrag" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y3J-ZI-5zW">
+                                            <rect key="frame" x="16" y="11" width="343" height="22"/>
+                                            <color key="backgroundColor" cyan="1" magenta="0.0" yellow="0.20000000000000001" black="0.0" alpha="0.13514019691780821" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="Gz1-Iu-r3p" id="smC-g9-QZc"/>
+                                            </connections>
+                                        </textView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="y3J-ZI-5zW" firstAttribute="trailing" secondItem="oyN-Bl-Ws5" secondAttribute="trailingMargin" id="Tpj-mn-WhX"/>
+                                        <constraint firstItem="y3J-ZI-5zW" firstAttribute="leading" secondItem="oyN-Bl-Ws5" secondAttribute="leadingMargin" id="bmz-EJ-HYM"/>
+                                        <constraint firstItem="y3J-ZI-5zW" firstAttribute="top" secondItem="oyN-Bl-Ws5" secondAttribute="topMargin" id="voN-DC-4Un"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="y3J-ZI-5zW" secondAttribute="bottom" id="xSg-Ie-K0y"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textView" destination="y3J-ZI-5zW" id="UYZ-iy-YiP"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0ZQ-KW-GdH" id="jYe-9x-BWh"/>
+                            <outlet property="delegate" destination="0ZQ-KW-GdH" id="ayW-4n-pW0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WCd-Jb-2eA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="170.46476761619192"/>
+        </scene>
+    </scenes>
+</document>
